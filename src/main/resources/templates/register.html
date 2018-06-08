@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>SharkLogin - Welcome!</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" th:href="@{/css/main.css}"
+              href="../../css/main.css" />
+    </head>
+    <body>
+
+        <a th:href="@{/}">Home</a>
+
+        <h2>The user</h2>
+        <table class="table table-striped">
+            <tbody>
+                <tr>
+                    <td th:text="${user.name}"></td>
+                </tr>
+                <tr>
+                    <td th:text="${user.email}"></td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>has been register, thankyou for your support!</h2>
+
+    </body>
+</html>

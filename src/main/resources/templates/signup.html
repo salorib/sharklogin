@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>SharkLogin - Sign In</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" th:href="@{/css/main.css}"
+              href="../../css/main.css" />
+    </head>
+    <body>
+
+        <a th:href="@{/}">Home</a>
+
+        <h1>Sign Up</h1>
+        <h2>It’s free and always will be.</h2>
+
+        <form th:action="@{/signup/register}" th:object="${user}" method="POST">
+
+            <span th:if="${error != null}" th:text="${error}">Static summary</span>
+
+            <table class="table table-condensed">
+                <tbody>
+                    <tr>
+                        <td>Name: </td>
+                        <td><input type="text" th:field="*{name}" /></td>
+                    </tr>
+                    <tr>
+                        <td>e-mail: </td>
+                        <td><input type="email" th:field="*{email}"/></td>
+                    </tr>
+                    <tr>
+                        <td>Password: </td>
+                        <td><input type="password" th:field="*{password}" /></td>
+                    </tr>
+                    <tr>
+                        <td><button type="Submit" class="btn">Sign In</button></td>
+                        <td><button type="reset" class="btn">Reset</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+
+    </body>
+</html>

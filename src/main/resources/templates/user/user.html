@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>SharkLogin - Welcome!</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" th:href="@{/css/main.css}"
+              href="../../css/main.css" />
+    </head>
+    <body>
+        <a th:href="@{/}">Home</a> <a th:href="@{/logout}"><button type="button" class="btn">Sign out</button></a>
+        <h1>Welcome!</h1>
+        <h2>User: <div th:text="${username}"></div> </h2>
+
+    </body>
+</html>
